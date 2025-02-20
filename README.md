@@ -36,8 +36,10 @@ Users can only work with their own messages, and access to different operations 
 - Security, authentication, and authorization tests via controllers.
 
 ### Tools:
-- **@SpringBootTest**, **Mockito**, **WebTestClient**, **@Transactional**.
-- **@JsonTest**, **JacksonTester**, **@WebMvcTest**, **AutoConfigureMockMvc**, **MockMvc**, **@MockitoBean**, **@Nested**, **@DisplayName**, **@Test**, **@Tag**, **@AutoConfigureTestDatabase**.
+- Mockito
+- WebTestClient
+- @Transactional
+- @AutoConfigureTestDatabase
 
 ## Running the Project
 
