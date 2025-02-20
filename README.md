@@ -43,7 +43,7 @@ Users can only work with their own messages, and access to different operations 
 
 1. **Clone the repository:**
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/Dmitrii-Russu/spring-academy-rest-api.git
     ```
 
 2. **Build and run:**
