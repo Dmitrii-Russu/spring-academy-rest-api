@@ -37,6 +37,7 @@ Users can only work with their own messages, and access to different operations 
 
 ### Tools:
 - **@SpringBootTest**, **Mockito**, **WebTestClient**, **@Transactional**.
+- **@JsonTest**, **JacksonTester**, **@WebMvcTest**, **AutoConfigureMockMvc**, **MockMvc**, **@MockitoBean**, **@Nested**, **@DisplayName**, **@Test**, **@Tag**, **@AutoConfigureTestDatabase**.
 
 ## Running the Project
 
