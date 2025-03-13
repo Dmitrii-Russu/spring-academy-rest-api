@@ -1,10 +1,3 @@
-CREATE TABLE data (
-    id BIGSERIAL PRIMARY KEY,
-    title TEXT NOT NULL,
-    content TEXT NOT NULL,
-    owner TEXT NOT NULL
-);
-
 CREATE TABLE user_entity (
     id BIGSERIAL PRIMARY KEY,
     username TEXT NOT NULL UNIQUE,

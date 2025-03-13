@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-class SecurityUserService implements UserDetailsService {
+public class SecurityUserService implements UserDetailsService {
     private final UserEntityRepository repository;
 
     public SecurityUserService(UserEntityRepository repository) {
