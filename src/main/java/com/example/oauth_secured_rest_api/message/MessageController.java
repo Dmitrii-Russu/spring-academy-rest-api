@@ -73,10 +73,8 @@ public class MessageController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteMessage(
-            Principal principal,
-            @PathVariable @Positive Long id
-    ) {
+    public void deleteMessage(@PathVariable @Positive Long id, Principal principal) {
         service.deleteMessage(id, principal.getName());
     }
+
 }

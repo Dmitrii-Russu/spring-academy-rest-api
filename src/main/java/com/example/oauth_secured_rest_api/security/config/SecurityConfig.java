@@ -1,5 +1,6 @@
 package com.example.oauth_secured_rest_api.security.config;
 
+import org.springframework.context.annotation.Import;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
@@ -76,9 +77,9 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
-                .csrf(AbstractHttpConfigurer::disable)
                 .cors(withDefaults())
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**")) // Отключаем CSRF для H2 Console
+                .csrf(AbstractHttpConfigurer::disable)
+                //.csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**")) // Отключаем CSRF для H2 Console
                 .headers(headers -> headers.frameOptions(
                         HeadersConfigurer.FrameOptionsConfig::disable)) // Отключаем защиту от фреймов для H2
                 .authorizeHttpRequests(auth -> auth

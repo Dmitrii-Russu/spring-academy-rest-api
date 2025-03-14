@@ -1,5 +1,4 @@
 package com.example.oauth_secured_rest_api.message;
-
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,10 +8,6 @@ import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
-/**
- * Service class for managing {@link Message} entities.
- * Provides methods to perform CRUD operations and other business logic for messages.
- */
 @Service
 public class MessageService {
     private final MessageRepository repository;
@@ -21,15 +16,6 @@ public class MessageService {
         this.repository = repository;
     }
 
-    /**
-     * Finds a {@link Message} by its id and owner.
-     * Throws an {@link EntityNotFoundException} if the message is not found.
-     *
-     * @param id the ID of the message
-     * @param owner the owner of the message
-     * @return the found {@link Message}
-     * @throws EntityNotFoundException if no message with the given id and owner is found
-     */
     public Message findByIdAndOwner(Long id, String owner) {
         return repository
                 .findByIdAndOwner(id, owner)
@@ -84,14 +70,6 @@ public class MessageService {
         return repository.save(messageToUpdate);
     }
 
-    /**
-     * Deletes a {@link Message} by its id and owner.
-     * The message is first found, then deleted from the repository.
-     *
-     * @param id the ID of the message to delete
-     * @param owner the owner of the message
-     * @throws EntityNotFoundException if the message is not found
-     */
     public void deleteMessage(Long id, String owner) {
         Message message = findByIdAndOwner(id, owner);
         repository.delete(message);
