@@ -93,6 +93,7 @@
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -101,6 +102,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
+				<configuration>
+					<!-- Отключаем параллельное выполнение тестов -->
+					<parallel>none</parallel>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>

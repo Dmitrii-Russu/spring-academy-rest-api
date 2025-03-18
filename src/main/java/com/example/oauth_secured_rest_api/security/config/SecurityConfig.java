@@ -62,7 +62,8 @@ public class SecurityConfig {
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SecurityFilterChain tokenSecurityFilterChain(HttpSecurity http) throws Exception {
         return http
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/token"))
+                .csrf(AbstractHttpConfigurer::disable)
+                //.csrf(csrf -> csrf.ignoringRequestMatchers("/token"))
                 .securityMatcher("/token") // Явное указание, что цепочка только для /token
                 .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
